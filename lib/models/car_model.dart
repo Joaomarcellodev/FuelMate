@@ -1,31 +1,26 @@
 class CarModel {
-  final int? id;
-  final String name;
-  final double consumption;
+  int? id;
+  String nome;
+  double consumo; 
+  double tanque;  
 
-  CarModel({this.id, required this.name, required this.consumption});
+  CarModel({this.id, required this.nome, required this.consumo, required this.tanque});
 
   Map<String, dynamic> toMap() {
     return {
       'id': id,
-      'name': name,
-      'consumption': consumption,
+      'nome': nome,
+      'consumo': consumo,
+      'tanque': tanque,
     };
   }
 
   factory CarModel.fromMap(Map<String, dynamic> map) {
     return CarModel(
       id: map['id'],
-      name: map['name'],
-      consumption: map['consumption'],
-    );
-  }
-
-  CarModel copyWith({int? id, String? name, double? consumption}) {
-    return CarModel(
-      id: id ?? this.id,
-      name: name ?? this.name,
-      consumption: consumption ?? this.consumption,
+      nome: map['nome'],
+      consumo: map['consumo'],
+      tanque: map['tanque'],
     );
   }
 }
