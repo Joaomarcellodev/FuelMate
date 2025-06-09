@@ -33,7 +33,8 @@ class CarListView extends StatelessWidget {
               final car = model.cars[index];
               return ListTile(
                 title: Text(car.nome),
-                subtitle: Text('Consumo: ${car.consumo} km/l - Tanque: ${car.tanque} L'),
+                subtitle: Text(
+                    'Consumo: ${car.consumo} km/l - Tanque: ${car.tanque} L'),
                 trailing: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -48,7 +49,16 @@ class CarListView extends StatelessWidget {
                     ),
                     IconButton(
                       icon: Icon(Icons.delete),
-                      onPressed: () => viewModel.deleteCar(car.id!),
+                      onPressed: () async {
+                        await model.deleteCar(car.id!);
+
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text('Carro removido com sucesso!'),
+                            duration: Duration(seconds: 2),
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),
