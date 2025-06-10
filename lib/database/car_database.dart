@@ -1,4 +1,4 @@
-import 'package:sqflite/sqflite.dart';
+import 'package:sqflite_common_ffi/sqflite_ffi.dart'; 
 import 'package:path/path.dart';
 import '../models/car_model.dart';
 
@@ -43,7 +43,12 @@ class CarDatabase {
 
   Future<int> updateCar(CarModel car) async {
     final db = await instance.database;
-    return await db.update('carros', car.toMap(), where: 'id = ?', whereArgs: [car.id]);
+    return await db.update(
+      'carros',
+      car.toMap(),
+      where: 'id = ?',
+      whereArgs: [car.id],
+    );
   }
 
   Future<int> deleteCar(int id) async {
