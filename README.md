@@ -11,6 +11,7 @@
 O <b>Car Manager</b> é um aplicativo desenvolvido com <b>Flutter</b> e <b>Dart</b>, projetado para gerenciar informações de automóveis, como nome, consumo (km/l) e capacidade do tanque. Com uma interface moderna, interativa e responsiva, o app permite adicionar, editar, excluir carros e visualizar gráficos de consumo de forma intuitiva. 🧑‍💻🚘  
 
 ### 🚀 Aprendizados
+- Arquitetura MVVM
 - Desenvolvimento de interfaces responsivas com <b>Flutter</b> e <b>Dart</b>.
 - Gerenciamento de estado com <b>Provider</b> para uma arquitetura escalável.
 - Criação de gráficos interativos com <b>fl_chart</b>.
