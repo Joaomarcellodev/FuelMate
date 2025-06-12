@@ -5,7 +5,7 @@ import '../viewmodels/car_viewmodel.dart';
 
 class CarFormView extends StatefulWidget {
   final CarModel? car;
-  CarFormView({this.car});
+  const CarFormView({super.key, this.car});
 
   @override
   _CarFormViewState createState() => _CarFormViewState();
